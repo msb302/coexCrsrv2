@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Users - COEx Admin</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/admin/admin-styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>COEx</h1>
+        <p>Admin Dashboard</p>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="/admin/dashboard.html">Dashboard</a></li>
+          <li class="active"><a href="/admin/manage-users.html">Manage Users</a></li>
+          <li><a href="/admin/credit-limits.html">Credit Limits</a></li>
+          <li><a href="/admin/product-approval.html">Product Approval</a></li>
+          <li><a href="/admin/analytics.html">Analytics</a></li>
+          <li><a href="/admin/system-settings.html">System Settings</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="logout-btn" class="btn btn-secondary">Logout</button>
+      </div>
+    </aside>
+    
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <h2>Manage Users</h2>
+        <div class="user-info">
+          <span id="user-name">Administrator</span>
+          <button id="notifications-btn" class="btn-icon">
+            <span class="notification-badge">2</span>
+            🔔
+          </button>
+        </div>
+      </header>
+      
+      <div class="dashboard-content">
+        <section class="manage-users-actions">
+          <div class="section-header">
+            <h3>User Management</h3>
+            <button class="btn btn-primary">Add New User</button>
+          </div>
+          
+          <div style="background-color: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+              <div>
+                <input type="text" placeholder="Search users..." style="padding: 8px; border: 1px solid #e5e7eb; border-radius: 4px; width: 250px;">
+              </div>
+              <div>
+                <select style="padding: 8px; border: 1px solid #e5e7eb; border-radius: 4px; margin-right: 10px;">
+                  <option>All Roles</option>
+                  <option>Pharmacy</option>
+                  <option>Distributor</option>
+                  <option>Admin</option>
+                </select>
+                <select style="padding: 8px; border: 1px solid #e5e7eb; border-radius: 4px;">
+                  <option>All Status</option>
+                  <option>Active</option>
+                  <option>Inactive</option>
+                </select>
+              </div>
+            </div>
+            
+            <table class="data-table" style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr>
+                  <th style="text-align: left; padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">ID</th>
+                  <th style="text-align: left; padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">Username</th>
+                  <th style="text-align: left; padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">Email</th>
+                  <th style="text-align: left; padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">Role</th>
+                  <th style="text-align: left; padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">Status</th>
+                  <th style="text-align: left; padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">1</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">admin1</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">admin@coex.com</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">Admin</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;"><span style="background-color: #10b981; color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px;">Active</span></td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">
+                    <button class="btn btn-small">Edit</button>
+                    <button class="btn btn-small btn-secondary">Disable</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">2</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">pharmacy1</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">info@alshifapharmacy.com</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">Pharmacy</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;"><span style="background-color: #10b981; color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px;">Active</span></td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">
+                    <button class="btn btn-small">Edit</button>
+                    <button class="btn btn-small btn-secondary">Disable</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">3</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">distributor1</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">info@medicalsuppliers.com</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">Distributor</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;"><span style="background-color: #10b981; color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px;">Active</span></td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">
+                    <button class="btn btn-small">Edit</button>
+                    <button class="btn btn-small btn-secondary">Disable</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">4</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">pharmacy2</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">contact@ammanmedical.com</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">Pharmacy</td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;"><span style="background-color: #6b7280; color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px;">Inactive</span></td>
+                  <td style="padding: 12px 15px; border-bottom: 1px solid #e5e7eb;">
+                    <button class="btn btn-small">Edit</button>
+                    <button class="btn btn-small btn-primary">Enable</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+              <div>
+                <span>Showing 1-4 of 42 users</span>
+              </div>
+              <div>
+                <button class="btn btn-small btn-secondary" disabled>Previous</button>
+                <button class="btn btn-small">Next</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="/admin/dashboard.js"></script>
+</body>
+</html>

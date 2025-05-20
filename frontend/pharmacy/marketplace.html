@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace - COEx</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/pharmacy/pharmacy-styles.css">
+  <link rel="stylesheet" href="/pharmacy/marketplace-styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <button class="sidebar-toggle" id="sidebar-toggle">☰</button>
+      <div class="sidebar-header">
+        <h1>COEx</h1>
+        <p>Pharmacy Dashboard</p>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="/pharmacy/dashboard.html">
+              <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+              </svg>
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="/pharmacy/marketplace.html">
+              <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+              </svg>
+              <span class="nav-text">Marketplace</span>
+            </a>
+          </li>
+          <li>
+            <a href="/pharmacy/place-order.html">
+              <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+              </svg>
+              <span class="nav-text">Place Order</span>
+            </a>
+          </li>
+          <li>
+            <a href="/pharmacy/order-history.html">
+              <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+              </svg>
+              <span class="nav-text">Order History</span>
+            </a>
+          </li>
+          <li>
+            <a href="/pharmacy/upload-payment.html">
+              <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+              </svg>
+              <span class="nav-text">Payments</span>
+            </a>
+          </li>
+          <li>
+            <a href="/pharmacy/deliveries.html">
+              <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+              </svg>
+              <span class="nav-text">Deliveries</span>
+            </a>
+          </li>
+          <li>
+            <a href="/pharmacy/expired-items.html">
+              <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 13h-2V7h2v6zm0 4h-2v-2h2v2zm-1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+              </svg>
+              <span class="nav-text">Expired Items</span>
+            </a>
+          </li>
+          <li>
+            <a href="/pharmacy/returns.html">
+              <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+              </svg>
+              <span class="nav-text">Returns</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="logout-btn" class="btn btn-secondary">
+          <svg class="nav-icon" style="margin-right: 5px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+          </svg>
+          <span>Logout</span>
+        </button>
+      </div>
+    </aside>
+    
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <h2>Marketplace</h2>
+        <div class="user-actions">
+          <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <button id="search-btn" class="btn btn-primary">Search</button>
+          </div>
+          <div class="cart-container">
+            <button id="cart-btn" class="btn-icon">
+              🛒 <span id="cart-count" class="cart-badge">0</span>
+            </button>
+          </div>
+        </div>
+      </header>
+      
+      <div class="dashboard-content">
+        <!-- Mobile filter toggle button -->
+        <button class="filter-toggle-btn" id="filter-toggle-btn">🔍</button>
+        
+        <!-- Filters sidebar -->
+        <div class="marketplace-filters">
+          <div class="filters-header">
+            <h3>Filters</h3>
+            <button class="close-filters" id="close-filters">&times;</button>
+          </div>
+          
+          <div class="filter-section">
+            <h3>Categories</h3>
+            <div class="filter-options">
+              <label class="filter-option">
+                <input type="checkbox" name="category" value="antibiotics"> Antibiotics
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" name="category" value="painkillers"> Painkillers
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" name="category" value="vitamins"> Vitamins & Supplements
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" name="category" value="dermatology"> Dermatology
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" name="category" value="gastrointestinal"> Gastrointestinal
+              </label>
+            </div>
+          </div>
+          
+          <div class="filter-section">
+            <h3>Manufacturers</h3>
+            <div class="filter-options">
+              <label class="filter-option">
+                <input type="checkbox" name="manufacturer" value="pharma1"> Jordan Pharma
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" name="manufacturer" value="pharma2"> MedEast
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" name="manufacturer" value="pharma3"> GlobalHealth
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" name="manufacturer" value="pharma4"> Amman Medical
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" name="manufacturer" value="pharma5"> BioTech Solutions
+              </label>
+            </div>
+          </div>
+          
+          <div class="filter-section">
+            <h3>Price Range</h3>
+            <div class="price-slider">
+              <label for="price-range" class="sr-only">Price Range</label>
+              <input type="range" id="price-range" min="0" max="100" value="100" aria-label="Price Range Slider" title="Adjust price range">
+              <div class="price-range-values">
+                <span>0 JD</span>
+                <span id="max-price">100 JD</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="filter-section">
+            <h3>Availability</h3>
+            <div class="filter-options">
+              <label class="filter-option">
+                <input type="checkbox" name="availability" value="in-stock" checked> In Stock Only
+              </label>
+            </div>
+          </div>
+          
+          <div class="filter-actions">
+            <button id="apply-filters" class="btn btn-primary">Apply Filters</button>
+            <button id="reset-filters" class="btn btn-secondary">Reset</button>
+          </div>
+        </div>
+        
+        <div class="products-container">
+          <h3 class="section-title">Featured Products</h3>
+          
+          <div class="products-grid" id="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-product-id="paracetamol-500mg">
+              <div class="product-badge bestseller">Bestseller</div>
+              <div class="product-image-container">
+                <img src="https://www.pharmax.ae/media/catalog/product/cache/8ad67eb399db4e7d29fd1acbcfcca04c/p/a/panadol-advance500mg-24tabs.jpg" alt="Paracetamol 500mg" class="product-image">
+                <button class="product-preview-btn" aria-label="Quick view">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name">Paracetamol 500mg</h4>
+                <p class="product-manufacturer">Jordan Pharma</p>
+                <p class="product-description">Fast-acting pain relief for headaches, toothaches, and general body pain.</p>
+                <div class="product-pricing">
+                  <div>
+                    <span class="product-price-original">JD 6.20</span>
+                    <span class="product-price">JD 5.50</span>
+                  </div>
+                  <span class="product-unit">Box of 20 tablets</span>
+                </div>
+                <div class="product-stock in-stock">In Stock</div>
+              </div>
+              <div class="product-actions">
+                <div class="quantity-selector">
+                  <button class="qty-btn qty-minus" aria-label="Decrease quantity">-</button>
+                  <label for="qty-input-1" class="sr-only">Quantity</label>
+                  <input type="number" id="qty-input-1" min="1" value="1" class="qty-input" aria-label="Product quantity" title="Enter quantity">
+                  <button class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+                <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card" data-product-id="amoxicillin-250mg">
+              <div class="product-image-container">
+                <img src="/frontend/images/products/amoxicillin.svg" alt="Amoxicillin 250mg" class="product-image">
+                <button class="product-preview-btn" aria-label="Quick view">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name">Amoxicillin 250mg</h4>
+                <p class="product-manufacturer">MedEast</p>
+                <p class="product-description">Broad-spectrum antibiotic effective against a wide range of bacterial infections.</p>
+                <div class="product-pricing">
+                  <div>
+                    <span class="product-price">JD 12.75</span>
+                  </div>
+                  <span class="product-unit">Box of 15 capsules</span>
+                </div>
+                <div class="product-stock in-stock">In Stock</div>
+              </div>
+              <div class="product-actions">
+                <div class="quantity-selector">
+                  <button class="qty-btn qty-minus" aria-label="Decrease quantity">-</button>
+                  <label for="qty-input-2" class="sr-only">Quantity</label>
+                  <input type="number" id="qty-input-2" min="1" value="1" class="qty-input" aria-label="Product quantity" title="Enter quantity">
+                  <button class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+                <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card" data-product-id="vitamin-d3-1000iu">
+              <div class="product-badge new">New</div>
+              <div class="product-image-container">
+                <img src="/frontend/images/products/vitamin-d.svg" alt="Vitamin D3 1000IU" class="product-image">
+                <button class="product-preview-btn" aria-label="Quick view">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name">Vitamin D3 1000IU</h4>
+                <p class="product-manufacturer">GlobalHealth</p>
+                <p class="product-description">Essential vitamin for bone health, immune function, and overall wellbeing.</p>
+                <div class="product-pricing">
+                  <div>
+                    <span class="product-price">JD 8.90</span>
+                  </div>
+                  <span class="product-unit">Bottle of 60 tablets</span>
+                </div>
+                <div class="product-stock in-stock">In Stock</div>
+              </div>
+              <div class="product-actions">
+                <div class="quantity-selector">
+                  <button class="qty-btn qty-minus" aria-label="Decrease quantity">-</button>
+                  <label for="qty-input-3" class="sr-only">Quantity</label>
+                  <input type="number" id="qty-input-3" min="1" value="1" class="qty-input" aria-label="Product quantity" title="Enter quantity">
+                  <button class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+                <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card" data-product-id="ibuprofen-400mg">
+              <div class="product-image-container">
+                <img src="/frontend/images/products/ibuprofen.svg" alt="Ibuprofen 400mg" class="product-image">
+                <button class="product-preview-btn" aria-label="Quick view">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name">Ibuprofen 400mg</h4>
+                <p class="product-manufacturer">Amman Medical</p>
+                <p class="product-description">Anti-inflammatory medication for pain relief, fever reduction, and swelling.</p>
+                <div class="product-pricing">
+                  <div>
+                    <span class="product-price-original">JD 7.00</span>
+                    <span class="product-price">JD 6.25</span>
+                  </div>
+                  <span class="product-unit">Box of 30 tablets</span>
+                </div>
+                <div class="product-stock in-stock">In Stock</div>
+              </div>
+              <div class="product-actions">
+                <div class="quantity-selector">
+                  <button class="qty-btn qty-minus" aria-label="Decrease quantity">-</button>
+                  <label for="qty-input-4" class="sr-only">Quantity</label>
+                  <input type="number" id="qty-input-4" min="1" value="1" class="qty-input" aria-label="Product quantity" title="Enter quantity">
+                  <button class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+                <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card" data-product-id="cetirizine-10mg">
+              <div class="product-badge limited">Limited</div>
+              <div class="product-image-container">
+                <img src="/frontend/images/products/cetirizine.svg" alt="Cetirizine 10mg" class="product-image">
+                <button class="product-preview-btn" aria-label="Quick view">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name">Cetirizine 10mg</h4>
+                <p class="product-manufacturer">BioTech Solutions</p>
+                <p class="product-description">Non-drowsy antihistamine for seasonal allergies and hay fever symptoms.</p>
+                <div class="product-pricing">
+                  <div>
+                    <span class="product-price">JD 7.50</span>
+                  </div>
+                  <span class="product-unit">Box of 14 tablets</span>
+                </div>
+                <div class="product-stock limited-stock">Limited Stock</div>
+              </div>
+              <div class="product-actions">
+                <div class="quantity-selector">
+                  <button class="qty-btn qty-minus" aria-label="Decrease quantity">-</button>
+                  <label for="qty-input-5" class="sr-only">Quantity</label>
+                  <input type="number" id="qty-input-5" min="1" value="1" class="qty-input" aria-label="Product quantity" title="Enter quantity">
+                  <button class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+                <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card" data-product-id="omeprazole-20mg">
+              <div class="product-image-container">
+                <img src="https://cdn.shop-apotheke.com/images/D11053603-p1.jpg" alt="Omeprazole 20mg" class="product-image">
+                <button class="product-preview-btn" aria-label="Quick view">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z"/></svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <h4 class="product-name">Omeprazole 20mg</h4>
+                <p class="product-manufacturer">Jordan Pharma</p>
+                <p class="product-description">Proton pump inhibitor that decreases stomach acid production, treating GERD and ulcers.</p>
+                <div class="product-pricing">
+                  <div>
+                    <span class="product-price">JD 9.99</span>
+                  </div>
+                  <span class="product-unit">Box of 28 capsules</span>
+                </div>
+                <div class="product-stock in-stock">In Stock</div>
+              </div>
+              <div class="product-actions">
+                <div class="quantity-selector">
+                  <button class="qty-btn qty-minus" aria-label="Decrease quantity">-</button>
+                  <label for="qty-input-6" class="sr-only">Quantity</label>
+                  <input type="number" id="qty-input-6" min="1" value="1" class="qty-input" aria-label="Product quantity" title="Enter quantity">
+                  <button class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+                <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product Preview Modal -->
+          <div id="product-preview-modal" class="product-preview-modal">
+            <div class="product-preview-container">
+              <button class="preview-close">&times;</button>
+              <div class="preview-content">
+                <div class="preview-image-container">
+                  <img src="" alt="" class="preview-image">
+                </div>
+                <div class="preview-details">
+                  <h2 class="preview-name"></h2>
+                  <p class="preview-manufacturer"></p>
+                  <p class="preview-description"></p>
+                  <div class="preview-pricing">
+                    <span class="preview-price"></span>
+                    <span class="preview-unit"></span>
+                  </div>
+                  <div class="preview-stock"></div>
+                  
+                  <div class="preview-specifications">
+                    <h3 class="preview-specs-title">Specifications</h3>
+                    <ul class="specs-list">
+                      <li><span>Form</span><span>Tablets</span></li>
+                      <li><span>SKU</span><span>MED-12345</span></li>
+                      <li><span>Storage</span><span>Store below 30°C</span></li>
+                      <li><span>Prescription</span><span>Not required</span></li>
+                    </ul>
+                  </div>
+                  
+                  <div class="preview-actions">
+                    <div class="quantity-selector">
+                      <button class="qty-btn qty-minus" aria-label="Decrease quantity">-</button>
+                      <label for="qty-input-preview" class="sr-only">Quantity</label>
+                      <input type="number" id="qty-input-preview" min="1" value="1" class="qty-input" aria-label="Product quantity" title="Enter quantity">
+                      <button class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pagination">
+            <button class="pagination-btn prev-page" disabled>&laquo; Previous</button>
+            <div class="pagination-numbers">
+              <span class="page-number active">1</span>
+              <span class="page-number">2</span>
+              <span class="page-number">3</span>
+            </div>
+            <button class="pagination-btn next-page">Next &raquo;</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <!-- Shopping Cart Modal -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content cart-modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Your Shopping Cart</h2>
+      
+      <div id="cart-items-container">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="cart-empty-message">Your cart is empty.</div>
+      
+      <div class="cart-summary">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cart-total-amount">JD 0.00</span>
+        </div>
+        <button id="checkout-btn" class="btn btn-primary" disabled>Proceed to Checkout</button>
+        <button id="continue-shopping-btn" class="btn btn-secondary">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="/pharmacy/marketplace.js"></script>
+</body>
+</html>

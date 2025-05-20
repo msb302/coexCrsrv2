@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Returns Management - COEx</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/distributor/distributor-styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>COEx</h1>
+        <p>Distributor Dashboard</p>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="/distributor/dashboard.html">Dashboard</a></li>
+          <li><a href="/distributor/manage-orders.html">Manage Orders</a></li>
+          <li><a href="/distributor/payment-collection.html">Payment Collection</a></li>
+          <li><a href="/distributor/product-management.html">Products</a></li>
+          <li><a href="/distributor/delivery-management.html">Deliveries</a></li>
+          <li><a href="/distributor/expired-items.html">Expired Items</a></li>
+          <li class="active"><a href="/distributor/returns-management.html">Manage Returns</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="logout-btn" class="btn btn-secondary">Logout</button>
+      </div>
+    </aside>
+    
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <h2>Returns Management</h2>
+        <div class="user-info">
+          <span id="user-name">Loading...</span>
+          <button id="notifications-btn" class="btn-icon">
+            <span class="notification-badge">5</span>
+            🔔
+          </button>
+        </div>
+      </header>
+      
+      <div class="dashboard-content">
+        <div style="text-align: center; padding: 50px;">
+          <h3>Returns Management System</h3>
+          <p>This page is under construction. Soon you'll be able to process returns and damaged goods from pharmacies here.</p>
+          <p><a href="/distributor/dashboard.html" class="btn btn-primary" style="display: inline-block; margin-top: 20px;">Go to Dashboard</a></p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/distributor/dashboard.js"></script>
+</body>
+</html>

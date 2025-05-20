@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Check Placeholder</title>
+    <g id="Check-Placeholder" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background -->
+        <rect id="Background" fill="#FFFFFF" x="0" y="0" width="800" height="400" rx="12"></rect>
+        <rect id="Border" stroke="#E2E8F0" stroke-width="2" x="1" y="1" width="798" height="398" rx="12"></rect>
+        
+        <!-- Top-left bank logo placeholder -->
+        <rect id="Logo-Background" fill="#F0F7FF" x="30" y="30" width="120" height="60" rx="8"></rect>
+        <text id="BANK" font-family="Arial-Bold, Arial" font-size="24" font-weight="bold" fill="#4A5568">
+            <tspan x="50" y="68">BANK</tspan>
+        </text>
+        
+        <!-- Check number -->
+        <text id="Check-Number-Label" font-family="Arial, sans-serif" font-size="10" font-weight="normal" fill="#A0AEC0">
+            <tspan x="650" y="50">CHECK NO.</tspan>
+        </text>
+        <text id="Check-Number" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4A5568">
+            <tspan x="650" y="75">987654321</tspan>
+        </text>
+        
+        <!-- Date line -->
+        <line x1="550" y1="120" x2="750" y2="120" id="Date-Line" stroke="#E2E8F0" stroke-width="1"></line>
+        <text id="Date-Label" font-family="Arial, sans-serif" font-size="10" font-weight="normal" fill="#A0AEC0">
+            <tspan x="550" y="110">DATE</tspan>
+        </text>
+        <text id="Date" font-family="Arial, sans-serif" font-size="14" font-weight="normal" fill="#4A5568">
+            <tspan x="600" y="114">2023-04-20</tspan>
+        </text>
+        
+        <!-- Pay to line -->
+        <line x1="50" y1="160" x2="750" y2="160" id="Pay-To-Line" stroke="#E2E8F0" stroke-width="1"></line>
+        <text id="Pay-To-Label" font-family="Arial, sans-serif" font-size="10" font-weight="normal" fill="#A0AEC0">
+            <tspan x="50" y="150">PAY TO THE ORDER OF</tspan>
+        </text>
+        <text id="Pay-To" font-family="Arial, sans-serif" font-size="14" font-weight="normal" fill="#4A5568">
+            <tspan x="200" y="154">Medical Distributor Co.</tspan>
+        </text>
+        
+        <!-- Amount box -->
+        <rect id="Amount-Box" stroke="#E2E8F0" stroke-width="1" x="600" y="180" width="150" height="40" rx="4"></rect>
+        <text id="Amount-JD" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#4A5568">
+            <tspan x="610" y="207">JD 1,250.00</tspan>
+        </text>
+        
+        <!-- Amount in words line -->
+        <line x1="50" y1="220" x2="750" y2="220" id="Amount-Words-Line" stroke="#E2E8F0" stroke-width="1"></line>
+        <text id="Amount-Words" font-family="Arial, sans-serif" font-size="14" font-weight="normal" fill="#4A5568">
+            <tspan x="100" y="214">One Thousand Two Hundred Fifty Jordanian Dinars Only</tspan>
+        </text>
+        
+        <!-- Bank details -->
+        <text id="Bank-Details" font-family="Arial, sans-serif" font-size="12" font-weight="normal" fill="#A0AEC0">
+            <tspan x="50" y="270">Al-Shifa Pharmacy</tspan>
+            <tspan x="50" y="290">123 Healthcare St.</tspan>
+            <tspan x="50" y="310">Amman, Jordan</tspan>
+        </text>
+        
+        <!-- Signature line -->
+        <line x1="550" y1="320" x2="750" y2="320" id="Signature-Line" stroke="#A0AEC0" stroke-width="1"></line>
+        <text id="Signature-Label" font-family="Arial, sans-serif" font-size="10" font-weight="normal" fill="#A0AEC0">
+            <tspan x="550" y="340">AUTHORIZED SIGNATURE</tspan>
+        </text>
+        
+        <!-- MICR code at bottom -->
+        <text id="MICR-Code" font-family="Courier, monospace" font-size="16" font-weight="normal" fill="#4A5568">
+            <tspan x="100" y="370">⑆123456789⑆ ⑆987654321⑆ ⑆0123456789⑆</tspan>
+        </text>
+    </g>
+</svg>

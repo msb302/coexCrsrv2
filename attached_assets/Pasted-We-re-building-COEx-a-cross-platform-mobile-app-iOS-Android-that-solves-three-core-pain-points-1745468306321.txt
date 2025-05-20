@@ -1,0 +1,56 @@
+We’re building COEx — a cross-platform mobile app (iOS + Android) that solves three core pain points in the pharmaceutical supply chain:
+Collecting payments, Ordering products, and Managing Expired items.
+
+The main goal is to replace manual, in-person operations (sales reps visiting pharmacies) with a digital system that reduces operational costs, improves accountability, and streamlines supply interactions between pharmacies, distributors, and manufacturers.
+
+⸻
+
+MVP Scope – Core Modules
+	1.	User Roles & Access
+	•	Roles: Pharmacy, Distributor/Manufacturer, Admin
+	•	Role-based dashboards with specific views and privileges
+	2.	Ordering System
+	•	Pharmacies place and track orders
+	•	Distributors receive, accept/reject, and update status
+	•	Order status flow: Pending > Accepted > Delivered
+	•	Order history, search, and notifications
+	3.	Payment Collection (Checks & Credit)
+	•	Upload check images (single or installment series)
+	•	Assign due dates, track payment status
+	•	Credit limits enforced per pharmacy (set by admin)
+	•	Reminder notifications and restriction logic for overdue accounts
+	4.	Delivery Coordination & Confirmation
+	•	Select delivery type (pickup, scheduled, 3rd-party)
+	•	Proof of delivery (signature, image, or OTP)
+	•	Pre/post transaction confirmations between buyer & supplier
+	5.	Expired Item Tracking (Premium/Phase 2)
+	•	Track product batches with expiry dates
+	•	Alerts for upcoming expirations (30/60/90 days)
+	•	Return request flow: submit reason, photo, auto-route to supplier
+
+⸻
+
+Phase 2 Add-ons (After MVP)
+	•	Installment Check Manager: upload, track, and auto-flag missed payments
+	•	Returns & Damaged Goods Module
+	•	Tiered Client Credit/Payment Limits
+	•	Admin Dashboard (mobile-first, web optional)
+	•	Analytics module (basic)
+
+⸻
+
+Tech Requirements
+	•	Cross-platform mobile app (Flutter preferred)
+	•	Backend: Firebase or Node.js + MongoDB
+	•	Push notifications
+	•	Secure file/image uploads (e.g. checks, signatures)
+	•	OCR optional for reading check data
+	•	Admin control panel (embedded or separate)
+
+⸻
+
+Deliverables
+	•	Fully working MVP with core flows
+	•	Modular and scalable codebase
+	•	Deployment-ready builds (TestFlight + Android)
+	•	Documentation for handoff
